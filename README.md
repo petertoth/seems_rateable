@@ -2,6 +2,10 @@
 
 Star rating gem for Rails application using jQuery plugin jRating
 
+## Demo
+
+<a href="http://rateable.herokuapp.com/">Demo</a> application, requires to sign up before rating 
+
 ## Installation
 
 Add this line to your application's Gemfile:

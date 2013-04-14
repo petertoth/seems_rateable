@@ -1,6 +1,6 @@
 # SeemsRateable
 
-TODO: Write a gem description
+Star rating gem for Rails application using jQuery plugin jRating
 
 ## Installation
 

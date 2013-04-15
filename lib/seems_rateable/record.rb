@@ -56,7 +56,7 @@ module SeemsRateable
 			 else
 				self.send "#{dimension}_average"
 			 end      
-	end
+		end
 		
 		def permission(user_id, dimension=nil)
 			#record = connection.select_one("SELECT id FROM rates WHERE rateable_id=#{self.id} and rateable_type='#{self.class.name}' and rater_id=#{user_id} and dimension#{dimension ? "='#{dimension.to_s}'" : " IS NULL"}")            

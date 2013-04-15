@@ -1,8 +1,14 @@
 # SeemsRateable
 
-TODO: Write a gem description
+Star rating gem for Rails application using jQuery plugin jRating
 
-## Installation
+## Demo
+
+<a href="http://rateable.herokuapp.com/">Demo</a> application, requires to sign up before rating 
+
+## Instructions
+
+### Installation
 
 Add this line to your application's Gemfile:
 
@@ -16,9 +22,15 @@ Or install it yourself as:
 
     $ gem install seems_rateable
 
-## Usage
+### Generation
 
-TODO: Write usage instructions here
+    $ rails g seems_rateable User
+    
+Generator takes one argument which is name of an existing user model e.g User, Client, Player ... <br>
+The generator creates necessary model, controller and asset files. It also creates route and migration files that are already migrated
+
+### 
+
 
 ## Contributing
 

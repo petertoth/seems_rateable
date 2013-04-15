@@ -41,7 +41,7 @@ module SeemsRateable
 		end  
 		
 		def allow_update_average(stars, user_id, dimension=nil)
-			obj = rates(dimension).where(:rater_id => user_id, :dimension => dimension).first!
+			obj = rates(dimension).where(:rater_id => user_id).first!
 			r = average(dimension)
 			r.avg = (r.avg*r.cnt - obj.stars + stars) / (r.cnt)
 			r.save!
@@ -60,8 +60,8 @@ module SeemsRateable
 		
 		def permission(user_id, dimension=nil)
 			#record = connection.select_one("SELECT id FROM rates WHERE rateable_id=#{self.id} and rateable_type='#{self.class.name}' and rater_id=#{user_id} and dimension#{dimension ? "='#{dimension.to_s}'" : " IS NULL"}")            
-			record = Rate.where(:rateable_id => self.id, :rateable_type => self.class.name, :rater_id => user_id, :dimension => dimension)        
-			record ? false : true				       
+			record = Rate.where(:rateable_id => self.id, :rateable_type => self.class.name, :rater_id => user_id, :dimension => dimension)  
+			record.empty? ? true : false				       
 		end 
 		
 		def rates(dimension=nil)

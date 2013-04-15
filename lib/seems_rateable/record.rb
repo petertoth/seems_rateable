@@ -60,7 +60,7 @@ module SeemsRateable
 		
 		def permission(user_id, dimension=nil)
 			#record = connection.select_one("SELECT id FROM rates WHERE rateable_id=#{self.id} and rateable_type='#{self.class.name}' and rater_id=#{user_id} and dimension#{dimension ? "='#{dimension.to_s}'" : " IS NULL"}")            
-			record = Rate.where(:rateable_id => self.id, :rateable_type => self.class.name, :rater_id => user_id, :dimension => dimension).first        
+			record = Rate.where(:rateable_id => self.id, :rateable_type => self.class.name, :rater_id => user_id, :dimension => dimension)        
 			record ? false : true				       
 		end 
 		

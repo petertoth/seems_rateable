@@ -1,6 +1,6 @@
 # SeemsRateable
 
-Star rating gem for Rails application using jQuery plugin jRating
+Star rating gem for Rails application using jQuery plugin <a href="http://www.myjqueryplugins.com/jquery-plugin/jrating">jRating</a>
 
 ## Demo
 
@@ -96,6 +96,9 @@ You can specify these options :
 <li><code>:static</code>Set to true to display static star rating, default false</li>
 <li><code>:id</code>ID of the div e.g <code>:id => "info"</code>, default nil</li>
 </ul>
+
+To edit the javascript options locate rateable.jquery.js file in /vendor/assets/javascripts/rateable/.
+The javascript options are explained directly in the file
 
 ## Contributing
 

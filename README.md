@@ -26,8 +26,8 @@ Or install it yourself as:
 
     $ rails g seems_rateable User
     
-Generator takes one argument which is name of an existing user model e.g User, Client, Player ... <br>
-The generator creates necessary model, controller and asset files. It also creates route and migration files that are already migrated
+Generator takes one argument which is the name of an existing user model e.g User, Client, Player ... <br>
+The generator creates necessary model, controller and asset files. It also creates route and migration files that are already being migrated
 
 ### Prepare
     

@@ -100,6 +100,11 @@ You can specify these options :
 To edit the javascript options locate rateable.jquery.js file in /vendor/assets/javascripts/rateable/.
 The javascript options are explained directly in the file
 
+### Removal
+
+To remove gem files simply execute <code>rails g seems_rateable_destroy</code> in terminal.
+Neither migration files nor database tables will be destroyed.
+
 ## Contributing
 
 1. Fork it

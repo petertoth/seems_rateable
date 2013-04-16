@@ -12,12 +12,13 @@ $(document).ready(function(){
          //rateInfosX : 45		//In pixel - Absolute left position of the information box during mousemove.
          //rateInfosY : 5		//In pixel - Absolute top position of the information box during mousemove.
          path : '<%= Rails.application.class.routes.url_helpers.ratings_path %>',
-         onSuccess : function(element, rate){
+           onSuccess : function(element, rate){
 				//something like ->
-				alert('success');
+				//alert('success');
+				$('<span class="text-success"><small>Thanks for rating!</small></span>').insertAfter(element)
          },
          onError : function(element, rate) {
-				alert('error')	
+				$('<span class="text-error"><small>You have already rated!</small></span>').insertAfter(element)
 			}
        });
  

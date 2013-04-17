@@ -37,7 +37,7 @@ Include Javascript files adding these lines to application.js
      //= require rateable/jRating.jquery
      //= require rateable/rateable.jquery
      
-Include CSS file adding <code><%= seems_rateable_style %></code> to your layaut head tag
+Include CSS file adding <code><%= seems_rateable_style %></code> to your layout head tag
 
 Also make sure you have an existing <code>current_user</code> object. If not, add something like this to your application controller
     

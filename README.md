@@ -1,5 +1,5 @@
 # SeemsRateable
-
+## This plugin is no longer compatible with Rails 4 and will be rebuilt soon
 Star rating gem for Rails application using jQuery plugin <a href="http://www.myjqueryplugins.com/jquery-plugin/jrating">jRating</a>
 
 ## Demo

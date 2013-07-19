@@ -17,5 +17,5 @@ test/version_tmp
 tmp
 .project
 .rvmrc
-./spec
-./test
+spec
+test

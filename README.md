@@ -44,7 +44,7 @@ Also make sure you have an existing <code>current_user</code> helper method
 Don't forget to run
 	$ rake db:migrate
 
-To prepare model add <code> seems_rateable </code> to your model. You can also pass a hash of options to 
+To prepare model add <code> seems_rateable </code> to your rateable model file. You can also pass a hash of options to 
 customize the functionality
 
 <ul>
@@ -52,17 +52,24 @@ customize the functionality
 <li><code>:allow_update</code>Allowing user to re-rate his own ratings, default set to false e.g <code>:allow_update=> true</code></li>
 </ul>
 
+	class Post < ActiveRecord::Base
+		seems_rateable :allow_update => true, :dimensions => [:quality, :length]
+	end
+
 To access object's rates use <code>rates</code> method, to get dimension rates pass an argument eg :
+
 	$ @object.rates
 	$ @object.rates(:quality)
 	$ @object.rates(:quantity)
 	
 This also applies to cached average rating e.g
+
 	$ @object.average	
 	$ @object.average(:quality)
 	$ @object.average(:quantity)
 	
-And to object's raters e.g	
+And to object's raters e.g
+	
 	$ @object.raters
 	$ @object.raters(:quality)
 	$ @object.raters(:quantity)

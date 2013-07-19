@@ -1,25 +1,25 @@
-# -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'seems_rateable/version'
+$:.push File.expand_path("../lib", __FILE__)
 
-Gem::Specification.new do |gem|
-  gem.name          = "seems_rateable"
-  gem.version       = SeemsRateable::VERSION
-  gem.authors       = ["Peter Toth"]
-  gem.email         = ["proximin@gmail.com"]
-  gem.description   = %q{Star rating gem for Rails application using jQuery plugin jRating}
-  gem.summary       = %q{Star rating gem for Rails application using jQuery plugin jRating}
-  gem.homepage      = ""
+# Maintain your gem's version:
+require "seems_rateable/version"
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
-  
-  gem.add_runtime_dependency 'rails'
-  
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency "rspec", "~> 2.6"
-  
+# Describe your gem and declare its dependencies:
+Gem::Specification.new do |s|
+  s.name        = "seems_rateable"
+  s.version     = SeemsRateable::VERSION
+  s.authors     = ["Peter Toth"]
+  s.email       = ["proximin@gmail.com"]
+  s.homepage    = "http://rateable.herokuapp.com"
+  s.summary     = "Star Rating Engine"
+  s.description = "Star rating engine using jQuery plugin jRating for Rails applications"
+
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+
+  s.add_dependency "rails"
+  s.add_dependency "jquery-rails"
+
+  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'factory_girl_rails'
 end

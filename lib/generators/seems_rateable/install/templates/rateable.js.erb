@@ -1,0 +1,25 @@
+$(document).ready(function(){
+      $(".rateable").jRating({		
+		//default options displayed below ->
+			
+			rateMax: 5,			//Maximal rate
+         length : 5,    		//Number of stars
+         //decimalLength : 0,    //Number of decimals in the rate
+         //type : 'big',  		//Big or small
+         //step : true, 		//If set to true, filling of the stars is done star by star (step by step).
+         //isDisabled: false,   //Set true to display static rating
+         //showRateInfo:false,   //Rate info panel, set true to display
+         //rateInfosX : 45,		//In pixel - Absolute left position of the information box during mousemove.
+         //rateInfosY : 5,		//In pixel - Absolute top position of the information box during mousemove.
+         path : '<%= SeemsRateable::Engine.routes.url_helpers.ratings_path %>',
+         onSuccess : function(element, rate){
+				//something like ->
+				//alert('success');
+				$('<span class="text-success"><small style="display:inline-block;">Thanks for rating!</small></span>').insertAfter(element)
+         },
+         onError : function(element, rate) {
+				$('<span class="text-error"><small style="display:inline-block;">You have already rated!</small></span>').insertAfter(element)
+			}
+       });
+ 
+});

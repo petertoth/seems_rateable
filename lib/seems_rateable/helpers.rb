@@ -16,7 +16,7 @@ module SeemsRateable
 		end
 		
 		def seems_rateable_stylesheet
-			stylesheet_link_tag "seems_rateable" 
+			stylesheet_link_tag    "seems_rateable/application", media: "all", "data-turbolinks-track" => true 
 		end
 		
 		private

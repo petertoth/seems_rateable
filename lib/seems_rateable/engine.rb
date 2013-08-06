@@ -11,7 +11,6 @@ module SeemsRateable
 	ActiveRecord::Base.send :include, SeemsRateable::Model
 	ActionView::Base.send :include, SeemsRateable::Helpers
 	ActionDispatch::Routing::Mapper.send :include, SeemsRateable::Routes
-  end
-       
+  end     
  end
 end

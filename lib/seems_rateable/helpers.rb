@@ -21,7 +21,7 @@ module SeemsRateable
    	
   private
   def jdisabled?(option)
-	 " jDisabled" if option || !current_user
+   " jDisabled" if option || !current_user
   end
  end
 end

@@ -6,16 +6,16 @@ module SeemsRateable
 	end
   end
 		
-	class NoCurrentUserInstanceError < StandardError
-	 def to_s
-	  "User instance current_user is not available."
-	 end
+  class NoCurrentUserInstanceError < StandardError
+	def to_s
+	 "User instance current_user is not available."
 	end
+  end
 		
-	class AlreadyRatedError < StandardError
-	 def to_s
-	  "User has already rated an object."
-	 end
-	end	
+  class AlreadyRatedError < StandardError
+	def to_s
+	 "User has already rated an object."
+	end
+  end	
  end
 end

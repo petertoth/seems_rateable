@@ -12,8 +12,8 @@
 	$.fn.jRating = function(op) {
 		var defaults = {
 			/** String vars **/
-			bigStarsPath : '<%= image_path "seems_rateable/stars.png" %>', // path of the icon stars.png
-			smallStarsPath : '<%= image_path "seems_rateable/small.png" %>', // path of the icon small.png
+			bigStarsPath : '<%= asset_path "seems_rateable/stars.png" %>', // path of the icon stars.png
+			smallStarsPath : '<%= asset_path "seems_rateable/small.png" %>', // path of the icon small.png
 			path : '<%= SeemsRateable::Engine.routes.url_helpers.ratings_path %>',
 			type : 'big', // can be set to 'small' or 'big'
 

@@ -1,4 +1,7 @@
 module SeemsRateable
-  class ApplicationController < ActionController::Base
+ class ApplicationController < ::ApplicationController
+  rescue_from SeemsRateable::Errors::AlreadyRatedError do |exception|
+	render :json => {:error => true}
   end
+ end
 end

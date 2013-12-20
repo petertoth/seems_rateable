@@ -7,7 +7,8 @@ module SeemsRateable
 	if !has_rated?(user_id, dimension)   
 	 self.rates.create do |r| 
 	  r.stars = stars
-	  r.rater_id = user_id 
+	  r.rater_id = user_id
+	  r.dimension = dimension
 	 end
 	 update_overall_average_rating(stars, dimension) 
 	elsif has_rated?(user_id, dimension) && can_update?

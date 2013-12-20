@@ -1,7 +1,9 @@
 begin
- require 'rails' 
+	require 'rails'
 rescue LoadError
 end
+
+require "jquery-rails"
 
 require "seems_rateable/engine"
 require "seems_rateable/errors"

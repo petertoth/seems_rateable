@@ -1,5 +1,5 @@
 begin
-	require 'rails'
+  require 'rails'
 rescue LoadError
 end
 

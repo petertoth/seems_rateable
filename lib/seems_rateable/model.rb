@@ -52,6 +52,15 @@ module SeemsRateable
 	 self.send "#{dimension}_average"
 	end      
   end
+  
+  def user_rate (rateable_id, dimension=nil, user_id)
+  	record = self.rates(dimension).where(:rateable_id => rateable_id, rater_id: user_id)
+  	if record.empty?
+  		return false
+  	else
+  		return record.first
+  	end
+  end
 			
   def rates(dimension=nil)
 	if dimension.nil?

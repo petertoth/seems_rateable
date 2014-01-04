@@ -15,4 +15,4 @@ class CreateSeemsRateableRates < ActiveRecord::Migration
   def self.down
     drop_table :rates
   end
-end 
+end

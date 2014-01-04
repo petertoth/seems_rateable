@@ -55,7 +55,7 @@ module SeemsRateable
     end
 
     def user_rate (rateable_id, dimension=nil, user_id)
-      record = self.rates(dimension).where(:rateable_id => rateable_id, rater_id: user_id)
+      record = self.rates(dimension).where(:rateable_id => rateable_id, :rater_id => user_id)
       if record.empty?
         return false
       else

@@ -50,11 +50,11 @@ module SeemsRateable
     end
 
     def rates(dimension=nil)
-      super.where(dimension: dimension)
+      rates_all.where(dimension: dimension)
     end
 
     def raters(dimension=nil)
-      super.where(dimension: dimension)
+      raters_all.where('seems_rateable_rates.dimension = ?', dimension)
     end
 
     def has_rated?(user_id, dimension=nil)
@@ -68,8 +68,8 @@ module SeemsRateable
 
     module ClassMethods
       def seems_rateable(opts={})
-        has_many :rates, :as => :rateable, :class_name => SeemsRateable::Rate, :dependent => :destroy
-        has_many :raters, :through => :rates_without_dimension, :source => :rater
+        has_many :rates_all, :as => :rateable, :class_name => SeemsRateable::Rate, :dependent => :destroy
+        has_many :raters_all, :through => :rates_all, :class_name => SeemsRateable::Engine.config.owner_class, :source => :rater
         has_many :rate_averages, :as => :cacheable, :class_name => SeemsRateable::CachedRating, :dependent => :destroy
 
         self.class_variable_set(:@@permission, opts[:allow_update] ? true : false)

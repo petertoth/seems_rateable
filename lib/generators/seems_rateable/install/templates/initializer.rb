@@ -1,4 +1,7 @@
 #SeemsRateable engine Initializer
 
-#Configure owner class of the given ratings
-SeemsRateable::Engine.config.owner_class = "User"
+SeemsRateable.configure do |config|
+  #config.rate_owner_class = 'User'
+  #config.current_rater_method = :current_user
+  #config.default_selector_class = 'rateable'
+end

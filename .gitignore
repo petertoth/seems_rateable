@@ -11,9 +11,10 @@ doc/
 lib/bundler/man
 pkg
 rdoc
-spec/**/*
-test/**/*
 tmp
 .project
 .rvmrc
-a
+.rspec
+spec/dummy/log/*
+spec/dummy/db/*.sqlite3
+spec/dummy/tmp/
